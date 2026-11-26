@@ -1,10 +1,10 @@
 # TradeVision AI — RNN Stock Predictor
 
-TradeVision AI is a professional Streamlit application that uses Recurrent Neural Networks (RNN) to forecast stock prices.
+An exploratory Streamlit app for training a recurrent neural network on historical stock prices and inspecting its predictions. Use it to compare settings and review model errors. It is a learning project for time-series modeling.
 
 ## 🚀 Features
-- **Advanced RNN Predictions**: Uses 3-layer SimpleRNN architecture.
-- **Dynamic Hyperparameters**: Live adjust Epochs, Window Size, and Forecast Horizon.
+- **RNN forecasting**: Uses 3-layer SimpleRNN architecture.
+- **Dynamic Hyperparameters**: Adjust training epochs, input window, and forecast horizon.
 - **Interactive Technical Analysis**: RSI, Bollinger Bands, and Volume charts.
 - **Model Performance Metrics**: RMSE, Residual tracking, and Actual vs Predicted scatter plots.
 - **Financial Insights**: Fundamental data, News headlines, and Analyst recommendations.
@@ -13,7 +13,9 @@ TradeVision AI is a professional Streamlit application that uses Recurrent Neura
 1. Create a virtual environment:
    ```bash
    python -m venv tv_env
-   source tv_env/bin/activate  # On Windows: tv_env\Scripts\activate
+   # macOS / Linux
+   source tv_env/bin/activate
+   # Windows PowerShell: .\tv_env\Scripts\Activate.ps1
    ```
 2. Install dependencies:
    ```bash
@@ -32,3 +34,7 @@ TradeVision AI is a professional Streamlit application that uses Recurrent Neura
 - `train.py`: Training logic.
 - `predict.py`: Prediction and forecasting functions.
 - `requirements.txt`: Python package dependencies.
+
+## Evaluation notes
+
+Use the RMSE and residual views to compare runs. For stronger evidence of forecasting value, compare against a last-price baseline on an untouched chronological test period before drawing conclusions.
